@@ -1,5 +1,5 @@
 resources:
-- name: flight-school-github
+- name: flight-school
   type: git
   source:
     uri: https://github.com/ttakamura/flight-school
@@ -8,6 +8,6 @@ resources:
 jobs:
 - name: test-app
   plan:
-  - get: flight-school-github
+  - get: flight-school
   - task: rspec
     file: flight-school/build.yml
